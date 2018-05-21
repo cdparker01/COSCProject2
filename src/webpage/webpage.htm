@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>Simple Form</title>
+        <link rel="stylesheet" type = "text/css" href = "Style.css">
+        <style>
+            body {
+                background-color: darkgray;
+            }   
+            h1{
+                text-align: center;
+                font-size: 50px;
+                color: black;
+            }
+            form{
+                margin: 20px auto;
+                width: 320px;
+                color: black;
+            }
+            input{
+                padding: 10px;
+                font-size: inherit;
+            }
+            input[type = "text"]{
+                display: block;
+                margin-bottom: 25px;
+                width: 100%;
+                border: 2px solid black;
+                background: #FAF69D;
+            }
+            input[type = "password"]{
+                display: block;
+                margin-bottom: 25px;
+                width: 100%;
+                border: 2px solid black;
+                background: #FAF69D;
+            }
+            input[type = "email"]{
+                display: block;
+                margin-bottom: 25px;
+                width: 100%;
+                border: 2px solid black;
+                background: #FAF69D;
+            }
+            button[type = "submit"]{
+                text-align: center;
+                font-size: 100%;
+                width: 320px;
+                height: 45px;
+                border: none;
+                background: red;
+                color: white;
+            }
+            input:focus{
+                background: white;
+            }
+            input[type="radio"]:checked + label {
+            font-weight: bold;
+            font-size: 18px;
+            }
+            button[type = "submit"]:focus {  
+                width: 344px;
+                height: 45px;
+                border: solid steelblue;
+                background: white;
+                color: red;  
+            }
+            input[type = "number"]{
+                display: block;
+                margin-bottom: 25px;
+                width: 100%;
+                border: 2px solid black;
+                background: #FAF69D;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Database Storage</h1>
+        <form>
+            <div class = "input">
+                <input type = "text" id = "firstName" name = "firstName" placeholder="First Name">
+            </div>
+        
+            <div class = "input">
+                <input type = "text" id = "lastName" name = "lastName" placeholder="Last Name">
+            </div>
+        
+            <div class = "input"> 
+               <input type = "email" id = "email" name = "email" placeholder=" Email">
+            </div>
+
+            <div class = "input">
+                <input type = "text" id = "company" name = "company" placeholder="Company">
+            </div>
+            <div class = "input">
+                <input type = "number" id = "phone" name = "phone" placeholder="Phone">
+            </div>
+            <button type = "submit" class ="btn btn-primary">Submit</button>
+        </form>
+        <h1>Database goes here</h1> 
+    </body>
+</html>
