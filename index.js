@@ -2,6 +2,8 @@ import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import routes from "./src/routes/routes";
+import { dirname } from "path";
+//import webpage from "./src/webpage/webpage";
 
 const app = express();
 const PORT = 3000;
@@ -15,9 +17,10 @@ app.use(bodyParser.json()); //parse incoming requests with json payloads
 
 routes(app);
 
+var path = require("path");
 //prints stuff to homepage
 app.get("/", (req, res) => {
-  res.send(`Node and express server running on port: ${PORT}`);
+  res.sendFile(path.join(__dirname + `/src/webpage/webpage.htm`));
 });
 
 //server is listening on this port
